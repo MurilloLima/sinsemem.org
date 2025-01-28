@@ -146,6 +146,41 @@
         </div>
     </div>
 
+    <div id="pricing" class="pricing-tables">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h4>Aplicativo SINSEMEM</h4>
+                        <img src="{{ asset('home/assets/images/heading-line-dec.png') }}" alt="">
+                        <p>Faça o download e instale o aplicativo SINSEMEM em seu celular.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="pricing-item-pro">
+                        <span class="price">$25</span>
+                        {{-- <h4></h4> --}}
+                        <div class="icon">
+                            <img src="{{ asset('home/assets/images/pricing-table-01.png') }}" alt="">
+                        </div>
+                        <ul>
+                            <li style="color: #fb1424 !important;">SINSEMEM</li>
+                        </ul>
+                        <div class="border-button">
+                            <a href="application-18d3589a-31a2-46ba-9bde-1d6e6c832802.apk">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="reuniao" class="services section">
         <div class="container">
             <div class="row">

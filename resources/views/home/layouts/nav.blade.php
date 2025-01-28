@@ -30,7 +30,7 @@
                              <a href="#noticias">Matérias</a>
                          </li>
                          <li class="scroll-to-section">
-                             <a href="application-18d3589a-31a2-46ba-9bde-1d6e6c832802.apk">Aplicativo</a>
+                             <a href="#pricing">Aplicativo</a>
                          </li>
                          {{-- <li class="scroll-to-section">
                              <a href="{{ route('home.pages.agenda.index') }}">Agenda</a>
