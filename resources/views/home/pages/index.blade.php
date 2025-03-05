@@ -200,7 +200,7 @@
                 @foreach ($reuniao as $item)
                     <div class="col-lg-3">
                         <div class="service-item first-service">
-                            <div class="icon"></div>
+                            {{-- <div class="icon"></div> --}}
                             <h4>{{ $item->assunto }}</h4>
                             <p>{{ $item->local }}</p>
                             <div class="text-button">
