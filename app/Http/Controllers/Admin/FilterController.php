@@ -17,11 +17,9 @@ class FilterController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function search(Request $request)
+    public function search()
     {
-        // $ano = 2025;
-        $user = User::get();
-        return Excel::download(new User()->all(), 'data.xlsx');
+
     }
 
     /**
