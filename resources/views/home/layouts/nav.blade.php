@@ -83,7 +83,7 @@
                      <x-input-error :messages="$errors->get('password')" class="mt-2" />
                      <br>
                      <input type="submit" value="Entrar" class="btn" style="">
-                     <a href="{{ route('home.pages.reset') }}">Esqueci a senha</a>
+                     {{-- <a href="{{ route('home.pages.reset') }}">Esqueci a senha</a> --}}
                  </form>
              </div>
          </div>
