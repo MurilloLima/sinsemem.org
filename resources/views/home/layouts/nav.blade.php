@@ -38,17 +38,15 @@
 
                          <li>
                              <div class="gradient-button">
-                                 <a href="{{ route('home.pages.cadastro') }}">
-                                     <i class="fa fa-sign-in-alt"></i>
-                                     Registro
-                                 </a>
+                                 <a href="{{ route('home.pages.cadastro') }}"><i class="fa fa-sign-in-alt"></i>
+                                     Cadastrar</a>
                              </div>
                          </li>
 
-
                          <li>
-                             <div class="gradient-button"><a id="modal_trigger" href="#modal"><i
-                                         class="fa fa-sign-in-alt"></i> Entrar</a></div>
+                             <div class="gradient-button">
+                                 <a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Entrar</a>
+                             </div>
                          </li>
 
                      </ul>
@@ -63,7 +61,8 @@
  </header>
  <!-- ***** Header Area End ***** -->
 
- <div id="modal" class="popupContainer" style="display:none;">
+ {{-- //login --}}
+ <div id="modalcadastro" class="popupContainer" style="display:none;">
      <div class="popupHeader">
          <span class="header_title">Entrar</span>
          <span class="modal_close"><i class="fa fa-times"></i></span>
@@ -75,8 +74,8 @@
              <div class="">
                  <form action="{{ route('login') }}" method="post">
                      @csrf
-                     <label for="">CPF</label>
-                     <input oninput="mascara(this)" type="text" name="email" class="form-control">
+                     <label for="">E-mail</label>
+                     <input type="text" name="email" class="form-control">
                      <x-input-error :messages="$errors->get('email')" class="mt-2" />
                      <label for="">Senha</label>
                      <input type="password" name="password" class="form-control">

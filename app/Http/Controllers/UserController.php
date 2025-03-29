@@ -33,23 +33,26 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            // 'profissao' => 'required',
-            // 'matricula' => 'required',
-            // 'sexo' => 'required',
-            // 'endereco' => 'required',
-            'cpf' => 'required|unique:users',
+            'cpf' => 'required',
+            'date'=>'required',
+            'sexo' => 'required',
+            'matricula' => 'required',
+            'profissao' => 'required',
+            'endereco' => 'required',
+            'email' => 'required|unique:users',
             'password' => 'required',
         ]);
 
-
         User::create([
             'name' => $request->name,
-            // 'profissao' => $request->profissao,
-            // 'role' => $request->role,
-            // 'matricula' => $request->matricula,
-            // 'sexo' => $request->sexo,
-            // 'endereco' => $request->endereco,
-            'cpf' => $request->email,
+            'cpf' => $request->cpf,
+            'date' => $request->date,
+            'sexo' => $request->sexo,
+            'matricula' => $request->matricula,
+            'profissao' => $request->profissao,
+            'role' => $request->role,
+            'endereco' => $request->endereco,
+            'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
         return redirect(RouteServiceProvider::HOME);

@@ -54,7 +54,7 @@
                             Cadastrar
                         </a>
                         <button type="button" style="margin-bottom: 5px" class="btn btn-danger" data-toggle="modal"
-                            data-target="#modal-default">
+                            data-target="#modal-filter">
                             Filtrar
                         </button>
                         <button type="button" style="margin-bottom: 5px" class="btn btn-default" data-toggle="modal"
@@ -62,7 +62,7 @@
                             Exportar
                         </button>
 
-                        <div class="modal fade" id="modal-default">
+                        <div class="modal fade" id="modal-filter">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -77,11 +77,11 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label for="">Idade início</label>
-                                                    <input type="number" name="start" class="form-control">
+                                                    <input type="date" name="datestart" class="form-control">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="">Idade fim</label>
-                                                    <input type="number" name="end" class="form-control">
+                                                    <input type="date" name="dateend" class="form-control">
                                                 </div>
                                             </div>
                                         </div>

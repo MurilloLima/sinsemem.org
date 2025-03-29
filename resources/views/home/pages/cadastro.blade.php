@@ -2,121 +2,177 @@
 @section('title', 'Cadastro')
 
 @section('content')
-    <div id="noticias" class="pricing-tables">
+    <div id="modal" class="popupContainer" style="display:none;">
+        <div class="popupHeader">
+            <span class="header_title">Login</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+        </div>
+
+        <section class="popupBody">
+
+            <!-- Register Form -->
+            <div class="user_register">
+                <form>
+                    <label>Full Name</label>
+                    <input type="text" />
+                    <br />
+
+                    <label>Email Address</label>
+                    <input type="email" />
+                    <br />
+
+                    <label>Password</label>
+                    <input type="password" />
+                    <br />
+
+                    <div class="checkbox">
+                        <input id="send_updates" type="checkbox" />
+                        <label for="send_updates">Send me occasional email updates</label>
+                    </div>
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i>
+                                Back</a></div>
+                        <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="section-heading">
-                        <h4>Cadastro</h4>
-                        <img src="{{ asset('home/assets/images/heading-line-dec.png') }}" alt="">
-                        <p>Mantenha-se atualizado sobre tudo aque acontece na sinsemem.</p>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12 align-self-center" style="color: white">
+                            <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s"
+                                data-wow-delay="1s">
+                                <div class="row">
+                                    <div class="cadastro">
+                                        <form action="{{ route('home.pages.user.store') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="role" value="2">
+                                            <div class="row">
+                                                <div class="col-md-12" style="text-align: center">
+                                                    <h1>Cadastrar-se</h1>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    @if ($errors->any())
+                                                        <div class="text-center"
+                                                            style="margin: 10px; background-color: red; color: #FFF;">
+                                                            <ul style="text-align: center">
+                                                                @foreach ($errors->all() as $error)
+                                                                    <li>{{ $error }}</li>
+                                                                @endforeach
+                                                            </ul>
+                                                        </div>
+                                                    @endif
+                                                    @if (session('msg'))
+                                                        <div class="row text-center">
+                                                            <div class="col-md-12">
+                                                                <div class="alert text-center"
+                                                                    style="color: #000; margin: 10px; text-align: center; background-color: olivedrab">
+                                                                    {{ session('msg') }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="">Nome</label><br>
+                                                    <input type="text" name="name" class="form-control"
+                                                        placeholder="Nome completo">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="">Data nascimento</label><br>
+                                                    <input type="date" name="date" class="form-control"
+                                                        placeholder="">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="">CPF</label><br>
+                                                    <input type="text" class="form-control" name="cpf"
+                                                        placeholder="000.000.000-00">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label for="">Matricula</label><br>
+                                                    <input type="text" name="matricula" class="form-control"
+                                                        placeholder="000000">
+                                                </div>
 
-                    </div>
-                </div>
+                                                <div class="col-md-3">
+                                                    <label for="Sexo">Sexo</label><br>
+                                                    <select name="sexo" class="form-control">
+                                                        <option value=""></option>
+                                                        <option value="Masculino">Masculino</option>
+                                                        <option value="Feminino">Feminino</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="">Profissão</label><br>
+                                                    <input type="text" class="form-control" name="profissao"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label for="">Estado civil</label>
+                                                    <select name="estado_civil" class="form-control">
+                                                        <option value=""></option>
+                                                        <option value="Solteiro">Solteiro</option>
+                                                        <option value="Casado">Casado</option>
+                                                        <option value="Divorciado">Divorciado</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <label for="">Endereço</label><br>
+                                                    <input type="text" class="form-control" name="endereco"
+                                                        placeholder="Rua...">
+                                                </div>
 
-                @if ($errors->any())
-                    <div class="alert alert-danger text-center">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li style="text-align: center">{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                @if (session('msg'))
-                    <div class="row text-center">
-                        <div class="col-lg-12">
-                            <div class="alert alert-success text-center" style="color: black">
-                                {{ session('msg') }}
+                                            </div>
+                                            <div class="row">
+                                                <h4>Informações de acesso</h4>
+                                                <div class="col-md-6">
+                                                    <label for="">E-mail</label><br>
+                                                    <input type="email" class="form-control" name="email"
+                                                        placeholder="">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="">Senha</label>
+                                                    <input type="password" name="password" class="form-control">
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="">Confirmar senha</label>
+                                                    <input type="password" name="password_confirmation"
+                                                        class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <br>
+                                                    <input type="submit" value="Cadastrar" class="btn"
+                                                        style="background-color: #FFF; color: #000">
+                                                </div>
+                                            </div>
+                                    </div>
+
+
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                @endif
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <form method="POST" action="{{ route('home.pages.user.store') }}">
-                            @csrf
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="">Nome completo</label>
-                                    <input type="text" name="name" class="form-control" required>
-                                    <input type="hidden" name="role" value="2">
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="">Data nascimento</label>
-                                    <input type="date" name="date" class="form-control" required>
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="">CPF</label>
-                                    <input oninput="mascara(this)" type="text" name="email" required
-                                        class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label for="">Matrícula</label>
-                                    <input type="text" name="matricula" class="form-control">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="">Profissão</label>
-                                    <input type="text" name="profissao" class="form-control">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="">Sexo</label>
-                                    <select name="sexo" class="form-control">
-                                        <option value=""></option>
-                                        <option value="Masculino">Masculino</option>
-                                        <option value="Feminino">Feminino</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label for="">Endereço</label>
-                                    <input type="text" name="endereco" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="">Escolha um senha</label>
-                                    <input type="password" name="password" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="">Confirmar senha</label>
-                                    <input type="password" name="password_confirmation" class="form-control" required
-                                        autocomplete="new-password">
-                                </div>
-                            </div>
-                            <br>
-                            <input type="submit" value="Cadastrar-se" class="btn btn-primary">
-                        </form>
-                    </div>
                 </div>
             </div>
-
         </div>
-
     </div>
-
-    <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Default Modal</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>One fine body…</p>
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
     </div>
 @endsection

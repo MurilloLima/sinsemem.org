@@ -40,34 +40,31 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            // 'role' => 'required',
-            // 'matricula' => ['required', 'unique:' . User::class],
-            // 'sexo' => 'required',
-            // 'endereco' => 'required',
-            // 'profissao' => 'required',
-            'email' => ['required', 'unique:' . User::class],
-            'matricula' => ['required', 'unique:' . User::class],
-            'password' => ['required', 'confirmed', Password::defaults()],
+            'name' => 'required',
+            'cpf' => 'required',
+            'date' => 'required',
+            'sexo' => 'required',
+            'matricula' => 'required',
+            'profissao' => 'required',
+            'endereco' => 'required',
+            'email' => 'required|unique:users',
+            'password' => 'required',
         ]);
-        $user = User::create([
+        // dd($request->all());
+        User::create([
             'name' => $request->name,
-            'role' => 2,
+            'cpf' => $request->cpf,
+            'date' => $request->date,
+            'sexo' => $request->sexo,
             'matricula' => $request->matricula,
-            // 'sexo' => $request->sexo,
-            // 'endereco' => $request->endereco,
-            // 'profissao' => $request->profissao,
+            'profissao' => $request->profissao,
+            'endereco' => $request->endereco,
             'email' => $request->email,
-            'matricula' => $request->matricula,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
         ]);
-
-        event(new Registered($user));
-
-        Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
+        return redirect()->back()->with('msg', 'Cadastro realizado com sucesso!');
     }
 
     /**

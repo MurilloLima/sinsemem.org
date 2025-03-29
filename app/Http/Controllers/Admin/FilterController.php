@@ -17,9 +17,12 @@ class FilterController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function search()
+    public function search(Request $request)
     {
-
+        $data = User::where('datenasc', '>=', $request->datestart)
+            ->where('datenasc', '<=', $request->dateend)
+            ->get();
+        dd($data);
     }
 
     /**

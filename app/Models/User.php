@@ -17,15 +17,14 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name',
-        'status',
         'cpf',
-        'role',
-        'profissao',
-        'matricula',
+        'date',
         'sexo',
+        'matricula',
+        'profissao',
         'endereco',
         'email',
-        'password',
+        'password'
     ];
     public function status()
     {
