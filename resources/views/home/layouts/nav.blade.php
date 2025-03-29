@@ -38,15 +38,17 @@
 
                          <li>
                              <div class="gradient-button">
-                                 <a href="{{ route('home.pages.cadastro') }}"><i class="fa fa-sign-in-alt"></i>
-                                     Cadastrar</a>
+                                 <a href="{{ route('home.pages.cadastro') }}">
+                                     <i class="fa fa-sign-in-alt"></i>
+                                     Registro
+                                 </a>
                              </div>
                          </li>
 
+
                          <li>
-                             <div class="gradient-button">
-                                 <a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Entrar</a>
-                             </div>
+                             <div class="gradient-button"><a id="modal_trigger" href="#modal"><i
+                                         class="fa fa-sign-in-alt"></i> Entrar</a></div>
                          </li>
 
                      </ul>
@@ -61,8 +63,7 @@
  </header>
  <!-- ***** Header Area End ***** -->
 
- {{-- //login --}}
- <div id="modalcadastro" class="popupContainer" style="display:none;">
+ <div id="modal" class="popupContainer" style="display:none;">
      <div class="popupHeader">
          <span class="header_title">Entrar</span>
          <span class="modal_close"><i class="fa fa-times"></i></span>

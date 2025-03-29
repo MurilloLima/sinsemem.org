@@ -19,10 +19,10 @@ class FilterController extends Controller
      */
     public function search(Request $request)
     {
-        $data = User::where('datenasc', '>=', $request->datestart)
-            ->where('datenasc', '<=', $request->dateend)
+        $users = User::where('date', '>=', $request->datestart)
+            ->where('date', '<=', $request->dateend)
             ->get();
-        dd($data);
+        return view('admin.pages.users.index',compact('users'));
     }
 
     /**

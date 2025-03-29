@@ -56,6 +56,7 @@ class UserController extends Controller
         User::create([
             'name' => $request->name,
             'cpf' => $request->cpf,
+            'role' => $request->role,
             'date' => $request->date,
             'sexo' => $request->sexo,
             'matricula' => $request->matricula,
@@ -63,6 +64,7 @@ class UserController extends Controller
             'endereco' => $request->endereco,
             'email' => $request->email,
             'password' => $request->password,
+            
         ]);
         return redirect()->back()->with('msg', 'Cadastro realizado com sucesso!');
     }
