@@ -50,7 +50,7 @@
                             <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s"
                                 data-wow-delay="1s">
                                 <div class="row">
-                                    <div class="cadastro">
+                                    <div class="cadastro" style="background-color: #c90014">
                                         <form action="{{ route('home.pages.user.store') }}" method="post">
                                             @csrf
                                             <input type="hidden" name="role" value="2">
