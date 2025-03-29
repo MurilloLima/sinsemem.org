@@ -108,6 +108,7 @@
                                             <th style="width: 10px">#</th>
                                             <th>Nome</th>
                                             <th>Profissão</th>
+                                            <th>Data nascimento</th>
                                             <th>Status</th>
                                             <th style="width: 100px">#</th>
                                         </tr>
@@ -118,6 +119,7 @@
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->profissao }}</td>
+                                                <td>{{ $item->date }}</td>
                                                 <th>{{ $item->startu->startu ?? 'Ativo' }}</th>
                                                 <td>
                                                     <a href="{{ route('admin.pages.mensagem.index') }}">
