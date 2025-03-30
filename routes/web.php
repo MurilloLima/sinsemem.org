@@ -133,6 +133,8 @@ Route::middleware('auth')->group(function () {
     // filter
     Route::post('admin/servidorers/filter', [FilterController::class, 'search'])->name('admin.servidor.filter');
 
+    // export excel
+    Route::post('users/export/', [UserController::class, 'export'])->name('admin.pages.export');
 });
 
 

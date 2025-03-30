@@ -58,10 +58,10 @@
                             Filtrar
                         </button>
                         <button type="button" style="margin-bottom: 5px" class="btn btn-default" data-toggle="modal"
-                            data-target="#modal-default">
+                            data-target="#modal-export">
                             Exportar
                         </button>
-
+                        {{-- modal filter --}}
                         <div class="modal fade" id="modal-filter">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -72,6 +72,41 @@
                                         </button>
                                     </div>
                                     <form action="{{ route('admin.servidor.filter', ['id' => 1]) }}" method="post">
+                                        @csrf
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="">Idade início</label>
+                                                    <input type="date" name="datestart" class="form-control" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="">Idade fim</label>
+                                                    <input type="date" name="dateend" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-default"
+                                                data-dismiss="modal">Fechar</button>
+                                            <button type="submit" class="btn btn-primary">Pesquisar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        {{-- modal export --}}
+                        <div class="modal fade" id="modal-export">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Exportar para o excel</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form action="{{ route('admin.pages.export') }}" method="post">
                                         @csrf
                                         <div class="modal-body">
                                             <div class="row">
@@ -146,8 +181,8 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h4 class="modal-title">Alterar startus</h4>
-                                                                <button type="button" class="close" data-dismiss="modal"
-                                                                    aria-label="Close">
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">×</span>
                                                                 </button>
                                                             </div>

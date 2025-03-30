@@ -14,6 +14,10 @@ class User extends Authenticatable
 
     protected $table = "users";
 
+    public function collection()
+    {
+        return User::all();
+    }
 
     protected $fillable = [
         'name',
