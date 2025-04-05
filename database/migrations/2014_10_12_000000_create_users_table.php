@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('role')->default('Ativo');
             $table->string('name');
-            $table->string('cpf');
-            $table->string('date');
-            $table->string('sexo');
-            $table->string('matricula');
-            $table->string('profissao');
-            $table->string('endereco');
+            $table->string('cpf')->nullable();
+            $table->string('date')->nullable();;
+            $table->string('sexo')->nullable();;
+            $table->string('matricula')->nullable();;
+            $table->string('profissao')->nullable();;
+            $table->string('endereco')->nullable();;
             $table->string('email');
             $table->string('password');
             $table->rememberToken();

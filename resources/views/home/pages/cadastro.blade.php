@@ -11,7 +11,7 @@
         <section class="popupBody">
 
             <!-- Register Form -->
-            <div class="user_register">
+            {{-- <div class="user_register">
                 <form>
                     <label>Full Name</label>
                     <input type="text" />
@@ -36,7 +36,7 @@
                         <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
                     </div>
                 </form>
-            </div>
+            </div> --}}
         </section>
     </div>
 

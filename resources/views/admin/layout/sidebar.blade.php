@@ -36,7 +36,7 @@
          </div> --}}
 
          <!-- Sidebar Menu -->
-         @if (auth()->user()->role == 'Ativo')
+         @if (auth()->user()->role == 2)
              <nav class="mt-2">
                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                      data-accordion="false">
