@@ -62,8 +62,8 @@
                                             <a href="#contact">Apple iOS<i class="fab fa-apple"></i></a>
                                         </div>
                                         <div class="white-button scroll-to-section">
-                                            <a href="https://play.google.com/store/apps/details?id=appinventor.ai_vitinhomusic2014.SINSEMEM3"
-                                                target="_blank">Android <i class="fab fa-google-play"></i></a>
+                                            <a href="#pricing" target="_blank">Android <i
+                                                    class="fab fa-google-play"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
                             <h4>{{ $item->assunto }}</h4>
                             <p>{{ $item->local }}</p>
                             <div class="text-button">
-                                <p>{{ date( 'd/m/Y' , strtotime($item->created_at))}}</p>
+                                <p>{{ date('d/m/Y', strtotime($item->created_at)) }}</p>
                             </div>
                         </div>
                     </div>
