@@ -45,7 +45,7 @@ class UserController extends Controller
         // dd($request->all());
         $request->validate([
             'name' => 'required',
-            'cpf' => 'required',
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'date' => 'required',
             'sexo' => 'required',
             'matricula' => 'required',
@@ -57,7 +57,7 @@ class UserController extends Controller
         // dd($request->all());
         User::create([
             'name' => $request->name,
-            'cpf' => $request->cpf,
+            'email' => $request->email,
             'role' => $request->role,
             'date' => $request->date,
             'sexo' => $request->sexo,
