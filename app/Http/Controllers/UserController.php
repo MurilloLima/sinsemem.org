@@ -33,7 +33,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'cpf' => 'required',
+            'email' => 'required',
             'date'=>'required',
             'sexo' => 'required',
             'matricula' => 'required',
@@ -45,7 +45,7 @@ class UserController extends Controller
 
         User::create([
             'name' => $request->name,
-            'cpf' => $request->cpf,
+            'email' => $request->cpf,
             'date' => $request->date,
             'sexo' => $request->sexo,
             'matricula' => $request->matricula,
