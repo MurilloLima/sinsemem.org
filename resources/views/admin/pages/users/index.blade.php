@@ -57,9 +57,11 @@
                             data-target="#modal-filter">
                             Filtrar
                         </button>
+
                         <a href="{{ route('admin.pages.export') }}" style="margin-bottom: 5px" class="btn btn-default">
                             Exportar
                         </a>
+
                         {{-- modal filter --}}
                         <div class="modal fade" id="modal-filter">
                             <div class="modal-dialog">

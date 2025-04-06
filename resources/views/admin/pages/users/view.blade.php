@@ -51,47 +51,45 @@
                                     <div class="col-md-4">
                                         <p><strong>E-mail:</strong> {{ $data->email2 }}</p>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-5">
                                         <p><strong>Endereco:</strong>{{ $data->endereco }}</p>
                                     </div>
-                                    <div class="col-md-2">
-                                        <p><strong>CEP:</strong>{{ $data->cep }}</p>
-                                    </div>
+
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <p><strong>Estado civil: {{ $data->estado_civil }}</strong></p>
                                     </div>
-                                </div>
-                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p><strong>CEP:</strong>{{ $data->cep }}</p>
+                                    </div>
                                     <div class="col-md-3">
                                         <p><strong>Cidade: {{ $data->cidade }}</strong></p>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <p><strong>UF:</strong> {{ $data->uf }}</p>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="col-md-3">
                                         <p><strong>Natural:</strong> {{ $data->natural }}</p>
                                     </div>
                                     <div class="col-md-3">
                                         <p><strong>CPF:</strong> {{ $data->cpf }}</p>
                                     </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-md-3">
                                         <p><strong>RG:</strong> {{ $data->rg }}</p>
                                     </div>
                                     <div class="col-md-3">
                                         <p><strong>Cargo:</strong> {{ $data->cargo }}</p>
                                     </div>
-                                    <div class="col-md-3">
-                                        <p><strong>Nivel:</strong> {{ $data->nivel }}</p>
-                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3">
+                                        <p><strong>Nivel:</strong> {{ $data->nivel }}</p>
+                                    </div>
+                                    <div class="col-md-3">
                                         <p><strong>Lotação:</strong> {{ $data->lotacao }}</p>
-
                                     </div>
                                     <div class="col-md-3">
                                         <p><strong>Pai:</strong> {{ $data->pai }}</p>
