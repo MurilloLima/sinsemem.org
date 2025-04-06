@@ -29,28 +29,77 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Servidores</h3>
+                                <h3 class="card-title">Servidor</h3>
                             </div>
 
                             <div class="card-body">
-                                <p><strong>Nome:</strong> {{ $data->name }}</p>
-                                <p><strong>Sexo:</strong> {{ $data->sexo }}</p>
-                                <p><strong>Matricula:</strong> {{ $data->matricula }}</p>
-                                <p><strong>CPF:</strong> {{ $data->email }}</p>
-                                <p><strong>E-mail:</strong> {{ $data->email2 }}</p>
-                                <p><strong>Endereco:</strong>{{ $data->endereco }}</p>
-                                <p><strong>CEP:</strong>{{ $data->cep }}</p>
-                                <p><strong>Estado civil: {{ $data->estado_civil }}</strong></p>
-                                <p><strong>Cidade: {{$data->cidade}}</strong></p>
-                                <p><strong>UF:</strong> {{$data->uf}}</p>
-                                <p><strong>Natural:</strong> {{$data->natural}}</p>
-                                <p><strong>CPF:</strong> {{$data->cpf}}</p>
-                                <p><strong>RG:</strong> {{$data->rg}}</p>
-                                <p><strong>Cargo:</strong> {{$data->cargo}}</p>
-                                <p><strong>Nivel:</strong> {{$data->nivel}}</p>
-                                <p><strong>Lotação:</strong> {{$data->lotacao}}</p>
-                                <p><strong>Pai:</strong> {{$data->pai}}</p>
-                                <p><strong>Mãe:</strong> {{$data->mae}}</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><strong>Nome:</strong> {{ $data->name }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Sexo:</strong> {{ $data->sexo }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Matricula:</strong> {{ $data->matricula }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p><strong>CPF:</strong> {{ $data->email }}</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p><strong>E-mail:</strong> {{ $data->email2 }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Endereco:</strong>{{ $data->endereco }}</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <p><strong>CEP:</strong>{{ $data->cep }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p><strong>Estado civil: {{ $data->estado_civil }}</strong></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p><strong>Cidade: {{ $data->cidade }}</strong></p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>UF:</strong> {{ $data->uf }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Natural:</strong> {{ $data->natural }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>CPF:</strong> {{ $data->cpf }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p><strong>RG:</strong> {{ $data->rg }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Cargo:</strong> {{ $data->cargo }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Nivel:</strong> {{ $data->nivel }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p><strong>Lotação:</strong> {{ $data->lotacao }}</p>
+
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Pai:</strong> {{ $data->pai }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><strong>Mãe:</strong> {{ $data->mae }}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
