@@ -19,8 +19,8 @@ class FilterController extends Controller
      */
     public function search(Request $request)
     {
-        $users = User::where('created_at', '>=', $request->inicio)
-            ->where('created_at', '<=', $request->fim)->get();
+        $users = User::where('date', '>=', $request->inicio)
+            ->where('dae', '<=', $request->fim)->get();
         return view('admin.pages.users.index', compact('users'));
     }
 
