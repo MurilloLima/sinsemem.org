@@ -62,7 +62,7 @@
                         {{-- <li><a href="#">link 2</a></li> --}}
                         {{-- <li><a href="#">link 3</a></li> --}}
                     </ul>
-                    
+
                 </div>
             </div>
             <div class="col-lg-3">
@@ -78,7 +78,7 @@
             <div class="col-lg-12">
                 <div class="copyright-text">
                     <p>
-                        Copyright © 2023 SINSEMEM - Sindicato dos Servidores da Educação. Todos os diretos reservados.
+                        Copyright © 2023-{{ date('Y') }} SINSEMEM - Sindicato dos Servidores da Educação. Todos os diretos reservados.
                     </p>
                 </div>
             </div>

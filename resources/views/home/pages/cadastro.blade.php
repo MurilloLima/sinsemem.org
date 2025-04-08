@@ -92,7 +92,7 @@
                                                 <div class="col-md-3">
                                                     <label for="">Data nascimento</label><br>
                                                     <input type="date" name="date" class="form-control"
-                                                        placeholder="">
+                                                        placeholder="" required>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label for="">CPF</label><br>
