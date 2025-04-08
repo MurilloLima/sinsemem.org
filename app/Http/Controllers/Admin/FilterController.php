@@ -20,7 +20,7 @@ class FilterController extends Controller
     public function search(Request $request)
     {
         $users = User::where('date', '>=', $request->inicio)
-            ->where('dae', '<=', $request->fim)->get();
+            ->where('date', '<=', $request->fim)->get();
         return view('admin.pages.users.index', compact('users'));
     }
 
