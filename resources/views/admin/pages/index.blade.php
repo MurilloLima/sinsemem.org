@@ -53,7 +53,6 @@
                         </div>
 
                     </div>
-
             </div>
         @else
             <div class="container-fluid">
