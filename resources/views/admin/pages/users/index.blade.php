@@ -78,11 +78,11 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label for="">Idade início</label>
-                                                    <input type="date" name="datestart" class="form-control" required>
+                                                    <input type="date" name="inicio" class="form-control" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="">Idade fim</label>
-                                                    <input type="date" name="dateend" class="form-control" required>
+                                                    <input type="date" name="fim" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
