@@ -115,7 +115,7 @@ class UserController extends Controller
             'uf' => $request->uf,
             'natural' => $request->natural,
             'rg' => $request->rg,
-            'email' => $request->email, //cpf
+            'email' => $request->email,
             'cargo' => $request->cargo,
             'nivel' => $request->nivel,
             'lotacao' => $request->lotacao,
@@ -138,27 +138,24 @@ class UserController extends Controller
         $request->validate(
             [
                 'name' => 'required',
+                'cpf' => 'required',
                 // 'email' => 'required',
                 'estado_civil' => 'required',
                 'endereco' => 'required',
-                'cep' => 'required',
-                'cidade' => 'required',
-                'uf' => 'required',
-                'nacionalidade' => 'required',
-                'natural' => 'required',
-                'rg' => 'required',
-                // 'email' => 'required',
-                'cargo' => 'required',
-                'nivel' => 'required',
-                'lotacao' => 'required',
-                'pai' => 'required',
-                'mae' => 'required',
+                'date' => 'required',
+                // 'cidade' => 'required',
+                // 'uf' => 'required',
+                // 'nacionalidade' => 'required',
+                // 'natural' => 'required',
+                // 'rg' => 'required',
             ]
         );
 
         $data->name = $request->name;
+        $data->cpf = $request->cpf;
         $data->estado_civil = $request->estado_civil;
         $data->endereco = $request->endereco;
+        $data->date = $request->date;
         $data->cep = $request->cep;
         $data->cidade = $request->cidade;
         $data->uf = $request->uf;
@@ -173,7 +170,7 @@ class UserController extends Controller
         $data->nacionalidade = $request->nacionalidade;
         $data->mae = $request->mae;
         $data->update();
-        return redirect()->back()->with('msg', 'Inscrição realizada com sucesso!');
+        return redirect()->back()->with('msg', 'Atualizado com sucesso!');
     }
 
     /**

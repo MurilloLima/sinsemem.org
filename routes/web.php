@@ -79,6 +79,7 @@ Route::middleware('auth')->group(function () {
 
     //users
     Route::get('admin/users', [UserController::class, 'index'])->name('admin.pages.users.index');
+    Route::post('admin/user/update/{id}', [UserController::class, 'update'])->name('admin.pages.user.update');
 
     //servidores
     Route::get('admin/servidores', [UserController::class, 'index'])->name('admin.pages.servidores.index');
