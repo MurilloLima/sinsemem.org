@@ -16,10 +16,17 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $noticias = Noticia::all();
-        $users = User::all();
-        $reunioes = Reunioe::all();
-        return view('admin.pages.index', compact('noticias', 'users', 'reunioes'));
+        $noticias = Noticia::latest()->get();
+        $users = User::latest()->get();
+        $reunioes = Reunioe::latest()->get();
+        if (Auth()->user()->date == null) {
+            return view('admin.pages.users.edit', compact('noticias', 'users', 'reunioes'));
+        } else {
+            return view('admin.pages.index', compact('noticias', 'users', 'reunioes'));
+        }
+
+
+        // return view('admin.pages.index', compact('noticias', 'users', 'reunioes'));
     }
 
     /**

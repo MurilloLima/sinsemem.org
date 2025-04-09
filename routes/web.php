@@ -54,15 +54,10 @@ Route::get('politica/', [HomeController::class, 'politica'])->name('home.pages.p
 // reset senha
 Route::get('login/reset', [HomeController::class, 'reset'])->name('home.pages.reset');
 
-// administrativo
-Route::get('/dashboard', function () {
-    // $contatos = Contato::latest()->get();
-    $users = User::latest()->get();
-    $reunioes = Reunioe::latest()->get();
-    return view('admin.pages.index', compact(['users', 'reunioes']));
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
+    //dashboard client
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+
     // noticias
     Route::get('admin/noticias', [NoticiasController::class, 'index'])->name('admn.pages.noticias.index');
     Route::get('admin/noticias/create', [NoticiasController::class, 'create'])->name('admin.pages.noticias.create');
