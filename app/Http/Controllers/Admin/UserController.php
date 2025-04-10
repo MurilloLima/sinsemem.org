@@ -152,23 +152,14 @@ class UserController extends Controller
         );
 
         $data->name = $request->name;
+        $data->date = $request->date;
         $data->cpf = $request->cpf;
+        $data->matricula = $request->matricula;
+        $data->sexo = $request->sexo;
+        $data->profissao = $request->profissao;
         $data->estado_civil = $request->estado_civil;
         $data->endereco = $request->endereco;
-        $data->date = $request->date;
-        $data->cep = $request->cep;
-        $data->cidade = $request->cidade;
-        $data->uf = $request->uf;
-        $data->natural = $request->natural;
-        $data->rg = $request->rg;
         $data->email = $request->email; //email
-        $data->email2 = $request->email2; //email
-        $data->cargo = $request->cargo;
-        $data->nivel = $request->nivel;
-        $data->lotacao = $request->lotacao;
-        $data->pai = $request->pai;
-        $data->nacionalidade = $request->nacionalidade;
-        $data->mae = $request->mae;
         $data->update();
         return redirect()->back()->with('msg', 'Atualizado com sucesso!');
     }

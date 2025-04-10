@@ -81,7 +81,8 @@
                                         <div class="col-3">
                                             <label for="">Sexo</label>
                                             <select name="sexo" class="form-control">
-                                                <option value=""></option>
+                                                <option value="{{ auth()->user()->sexo }}" selected>
+                                                    {{ auth()->user()->sexo }}</option>
                                                 <option value="Masculino">Masculino</option>
                                                 <option value="Feminino">Feminino</option>
                                             </select>
@@ -96,7 +97,8 @@
                                         <div class="col-md-4">
                                             <label for="">Estado civil</label>
                                             <select name="estado_civil" class="form-control">
-                                                <option value=""></option>
+                                                <option value="{{ auth()->user()->estado_civil }}" selected>
+                                                    {{ auth()->user()->estado_civil }}</option>
                                                 <option value="Solteiro">Solteiro</option>
                                                 <option value="Casado">Casado</option>
                                                 <option value="Divorciado">Divorciado</option>
@@ -111,7 +113,8 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label for="">E-mail</label>
-                                            <input type="email" name="email" value="{{ auth()->user()->email }}" class="form-control">
+                                            <input type="email" name="email" value="{{ auth()->user()->email }}"
+                                                class="form-control">
                                         </div>
                                     </div>
                                 </div>
