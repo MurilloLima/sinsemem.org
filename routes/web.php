@@ -32,9 +32,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
-
 //cadastro users
 Route::get('user/cadastro/', [HomeController::class, 'cadastro'])->name('home.pages.cadastro');
+Route::post('users/store/', [UserController::class, 'store'])->name('home.pages.user.store');
 //noticia
 Route::get('noticia/{slug}', [HomeController::class, 'view'])->name('home.pages.noticia.view');
 // servidor
@@ -44,8 +44,6 @@ Route::get('noticia/{slug}', [HomeController::class, 'view'])->name('home.pages.
 Route::get('agenda/', [AgendaController::class, 'index'])->name('home.pages.agenda.index');
 Route::post('agenda/store', [AgendaController::class, 'store'])->name('home.pages.agenda.store');
 
-// users
-Route::post('users/store/', [UserController::class, 'store'])->name('home.pages.user.store');
 // download app
 Route::get('app/download/', [HomeController::class, 'download'])->name('home.pages.download');
 //politica
