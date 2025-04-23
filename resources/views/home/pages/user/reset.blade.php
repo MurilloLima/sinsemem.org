@@ -3,23 +3,23 @@
 @section('content')
     <div id="noticias" class="pricing-tables">
 
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><br><br>
+                <h2>Recuperar senha</h2><br>
+                <span>Enviar link para redefinir senha por e-mail</span>
+                <form method="POST" action="{{ route('password.reset') }}">
+                    @csrf
+                    {{-- <label for="E-mail">E-mail</label><br> --}}
+                    <div class="flex items-center justify-end mt-4">
+                        <input type="email" name="email" class="form-control" placeholder="E-mail cadastrado"><br>
+                        <button type="submit" class="btn">Enviar</button>
 
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
-                    autofocus />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                    </div>
+                </form>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-primary-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-primary-button>
-            </div>
-        </form>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
     </div>
 @endsection
