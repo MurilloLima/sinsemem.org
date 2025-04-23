@@ -8,7 +8,7 @@
             <div class="col-md-4"><br><br>
                 <h2>Recuperar senha</h2><br>
                 <span>Enviar link para redefinir senha por e-mail</span>
-                <form method="POST" action="{{ route('password.reset') }}">
+                <form method="POST" action="{{ route('password.store') }}">
                     @csrf
                     {{-- <label for="E-mail">E-mail</label><br> --}}
                     <div class="flex items-center justify-end mt-4">
