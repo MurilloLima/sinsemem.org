@@ -20,17 +20,17 @@
                              <a href="#Filiados">Sobre</a>
                          </li> --}}
                          <li class="scroll-to-section">
-                             <a href="#reuniao">Convocação</a>
+                             <a href="https://www.sinsemem.org/#reuniao">Convocação</a>
                          </li>
                          {{-- <li class="scroll-to-section"><a href="#pricing">Quem somos</a></li> --}}
                          <li class="scroll-to-section">
-                             <a href="#congressos">Assembleia</a>
+                             <a href="https://www.sinsemem.org/#congressos">Assembleia</a>
                          </li>
                          <li class="scroll-to-section">
-                             <a href="#noticias">Matérias</a>
+                             <a href="https://www.sinsemem.org/#noticias">Matérias</a>
                          </li>
                          <li class="scroll-to-section">
-                             <a href="#pricing">Aplicativo</a>
+                             <a href="https://www.sinsemem.org/#pricing">Aplicativo</a>
                          </li>
                          {{-- <li class="scroll-to-section">
                              <a href="{{ route('home.pages.agenda.index') }}">Agenda</a>
@@ -47,8 +47,11 @@
 
 
                          <li>
-                             <div class="gradient-button"><a id="modal_trigger" href="#modal"><i
-                                         class="fa fa-sign-in-alt"></i> Entrar</a></div>
+                             <div class="gradient-button">
+                                 <a id="modal_trigger" href="#modal">
+                                     <i class="fa fa-sign-in-alt"></i> Entrar
+                                 </a>
+                             </div>
                          </li>
 
                      </ul>

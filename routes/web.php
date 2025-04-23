@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
+
 //cadastro users
 Route::get('user/cadastro/', [HomeController::class, 'cadastro'])->name('home.pages.cadastro');
 Route::post('users/store/', [UserController::class, 'store'])->name('home.pages.user.store');
