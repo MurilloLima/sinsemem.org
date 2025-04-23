@@ -11,13 +11,8 @@ use App\Http\Controllers\ArquivoController;
 use App\Http\Controllers\Home\AgendaController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\MensagenController;
-use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StartuController;
-use App\Models\Contato;
-use App\Models\Noticia;
-use App\Models\Reunioe;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
