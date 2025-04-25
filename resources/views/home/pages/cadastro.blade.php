@@ -91,8 +91,8 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label for="">Data nascimento</label><br>
-                                                    <input type="date" name="date" class="form-control"
-                                                        placeholder="" required>
+                                                    <input type="date" name="date" class="form-control" placeholder=""
+                                                        required>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label for="">CPF</label><br>
@@ -174,5 +174,5 @@
             </div>
         </div>
     </div>
-    </div>
+
 @endsection
