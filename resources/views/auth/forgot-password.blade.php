@@ -11,7 +11,8 @@
                     </div>
                     <br><br><br>
                     <!-- Session Status -->
-                    <x-auth-session-status class="mb-4 btn-success text-center" :status="session('status')" />
+                    <x-auth-session-status style="border-radius: 20px; padding: 10px; text-align: center"
+                        class="mb-4 btn-success text-center" :status="session('status')" />
 
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
@@ -23,7 +24,6 @@
                             <x-input-error :messages="$errors->get('email')" class="mt-2" style="color: red" />
                         </div>
                         <br>
-
                         <button class="btn btn-primary" type="submit">Enviar</button>
                     </form>
                 </div>
