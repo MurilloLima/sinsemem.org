@@ -85,8 +85,8 @@
                      <input type="password" name="password" class="form-control">
                      <x-input-error :messages="$errors->get('password')" class="mt-2" />
                      <br>
-                     <input type="submit" value="Entrar" class="btn" style="">
-                     <a href="{{ route('password.request') }}" class="btn">Recuperar senha?</a>
+                     <input type="submit" value="Entrar" class="btn" style=""><br>
+                     Esqueceu sua senha? <a href="{{ route('password.request') }}">Clique aqui</a> para recuperar
                      {{-- <a href="{{ route('home.pages.reset') }}">Esqueci a senha</a> --}}
                  </form>
              </div>
