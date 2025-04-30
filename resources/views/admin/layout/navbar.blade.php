@@ -20,7 +20,7 @@
 
           <!-- Messages Dropdown Menu -->
           <li class="nav-item dropdown">
-              @if (auth()->user()->role == 2)
+              @if (auth()->user()->role == 'Ativo')
                   <a class="nav-link" data-toggle="dropdown" href="#">
                       <i class="far fa-comments"></i>
                       <span class="badge badge-danger navbar-badge">0</span>

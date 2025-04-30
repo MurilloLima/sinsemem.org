@@ -26,7 +26,7 @@
         <section class="content">
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
-                @if (auth()->user()->role == 2)
+                @if (auth()->user()->role === 'Ativo')
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">

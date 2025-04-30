@@ -50,7 +50,7 @@ class UserController extends Controller
             'sexo' => $request->sexo,
             'matricula' => $request->matricula,
             'profissao' => $request->profissao,
-            'role' => $request->role,
+            'role' => 2,
             'endereco' => $request->endereco,
             'email' => $request->email,
             'password' => Hash::make($request->password)
