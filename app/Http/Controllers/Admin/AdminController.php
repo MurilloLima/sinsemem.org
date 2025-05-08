@@ -19,6 +19,9 @@ class AdminController extends Controller
         $noticias = Noticia::latest()->get();
         $users = User::latest()->get();
         $reunioes = Reunioe::latest()->get();
+        if(Auth()->user()->statu == null){
+            return view('home.pages.user.verify');
+        }
         if (Auth()->user()->date == null) {
             return view('admin.pages.users.edit', compact('noticias', 'users', 'reunioes'));
         } else {

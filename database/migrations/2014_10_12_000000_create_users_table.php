@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('endereco')->nullable();
             $table->string('email');
             $table->string('password');
-            $table->string('statu')->nullable();;
+            $table->string('statu')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

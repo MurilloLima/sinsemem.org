@@ -60,27 +60,7 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
-                                            <tr>
-                                                <td>{{ $item->id }}</td>
-                                                <td>{{ $item->assunto }}</td>
-                                                <td>{{ $item->assunto }}</td>
-                                                <td>{{ $item->horario }}</td>
-                                                <td>Ativo</td>
-                                                <td>
-                                                    <div class="card-tools">
-                                                        <form action="{{ route('admin.reunioes.pages.destroy') }}"
-                                                            method="post">
-                                                            @csrf
-                                                            <input type="hidden" name="id"
-                                                                value="{{ $item->id }}">
-                                                            <button type="submit" class="btn btn-tool">
-                                                                <i class="fas fa-times"></i>
-                                                            </button>
-                                                        </form>
 
-                                                    </div>
-                                                </td>
-                                            </tr>
                                         @endforeach
 
                                     </tbody>

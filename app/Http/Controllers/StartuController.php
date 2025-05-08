@@ -58,7 +58,7 @@ class StartuController extends Controller
                 'userid' => $id,
                 'startu' => $request->startu,
             ]);
-            return redirect()->back()->with('msg', 'Alterado com sucesso!');
+            return redirect()->back()->with('msg', 'Criaa com sucesso!');
         } else {
             $data = Startu::where('userid', '=', $id)->first();
             $data->userid = $id;

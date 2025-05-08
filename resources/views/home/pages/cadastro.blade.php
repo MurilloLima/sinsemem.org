@@ -88,6 +88,7 @@
                                                     <label for="">Nome</label><br>
                                                     <input type="text" name="name" class="form-control"
                                                         placeholder="Nome completo">
+                                                        <input type="hidden" name="statu" value="2">
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label for="">Data nascimento</label><br>

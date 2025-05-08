@@ -34,7 +34,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
-            'date'=>'required',
+            'date' => 'required',
             'sexo' => 'required',
             'matricula' => 'required',
             'profissao' => 'required',
@@ -50,10 +50,13 @@ class UserController extends Controller
             'sexo' => $request->sexo,
             'matricula' => $request->matricula,
             'profissao' => $request->profissao,
+            'statu' => 2,
             'role' => 2,
             'endereco' => $request->endereco,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
+
+
         ]);
         return redirect(RouteServiceProvider::HOME);
     }
@@ -79,7 +82,10 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = User::where('id', '=', $id)->first();
+        $data->statu = $request->startu;
+        $data->update();
+        return redirect()->back()->with('msg', 'Alterado com sucesso!');
     }
 
     /**

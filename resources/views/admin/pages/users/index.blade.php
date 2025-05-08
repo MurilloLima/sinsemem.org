@@ -156,7 +156,13 @@
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->profissao }}</td>
                                                 <td>{{ $item->date }}</td>
-                                                <th>{{ $item->startu->startu ?? 'Ativo' }}</th>
+                                                <th>
+                                                    @if ($item->statu == 1)
+                                                        Ativo
+                                                    @elseif($item->statu == 2)
+                                                        Inativo
+                                                    @endif
+                                                </th>
                                                 <td>
                                                     <a href="{{ route('admin.pages.mensagem.index') }}">
                                                         <i class="nav-icon far fa-envelope"></i>
@@ -176,7 +182,7 @@
                                             <div class="modal fade" id="modal-default{{ $item->id }}"
                                                 aria-hidden="true" style="display: none;">
                                                 <div class="modal-dialog">
-                                                    <form action="{{ route('admin.pages.starts', $item->id) }}"
+                                                    <form action="{{ route('admin.pages.statu', $item->id) }}"
                                                         method="post">
                                                         @csrf
                                                         <div class="modal-content">
@@ -189,9 +195,9 @@
                                                             </div>
 
                                                             <div class="modal-body">
-                                                                <select name="startu" class="form-control">
-                                                                    <option value="Ativo">Ativo</option>
-                                                                    <option value="Aposentado">Aposentado</option>
+                                                                <select name="statu" class="form-control">
+                                                                    <option value="1">Ativo</option>
+                                                                    <option value="2">Inativo</option>
                                                                     {{-- <option value=""></option> --}}
                                                                     {{-- <option value=""></option> --}}
                                                                 </select>

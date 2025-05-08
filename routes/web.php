@@ -12,7 +12,6 @@ use App\Http\Controllers\Home\AgendaController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\MensagenController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\StartuController;
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
@@ -20,13 +19,12 @@ use Illuminate\Support\Facades\Password;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
 
-//cadastro users
-Route::get('user/cadastro/', [HomeController::class, 'cadastro'])->name('home.pages.cadastro');
+//users
+Route::get('user/cadastro/', [HomeController::class, 'create'])->name('home.pages.cadastro');
 Route::post('users/store/', [UserController::class, 'store'])->name('home.pages.user.store');
+
 //noticia
 Route::get('noticia/{slug}', [HomeController::class, 'view'])->name('home.pages.noticia.view');
-// servidor
-// Route::post('servidor/store/', [ControllersUserController::class, 'store'])->name('home.pages.servidor.store');
 
 // agenda
 Route::get('agenda/', [AgendaController::class, 'index'])->name('home.pages.agenda.index');
@@ -107,7 +105,7 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/agenda', [AgendaController::class, 'indexadmin'])->name('admin.pages.agenda.index');
 
     // startus
-    Route::post('admin/startus/{id}', [StartuController::class, 'update'])->name('admin.pages.starts');
+    Route::post('admin/startus/{id}', [UserController::class, 'update'])->name('admin.pages.statu');
 
     // filter
     Route::post('admin/servidorers/filter', [FilterController::class, 'search'])->name('admin.servidor.filter');

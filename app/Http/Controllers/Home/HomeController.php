@@ -23,7 +23,7 @@ class HomeController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function cadastro()
+    public function create()
     {
         return view('home.pages.cadastro');
     }

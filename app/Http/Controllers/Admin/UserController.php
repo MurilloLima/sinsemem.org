@@ -45,7 +45,7 @@ class UserController extends Controller
         // dd($request->all());
         $request->validate([
             'name' => 'required',
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'date' => 'required',
             'sexo' => 'required',
             'matricula' => 'required',
@@ -66,6 +66,7 @@ class UserController extends Controller
             'endereco' => $request->endereco,
             'email' => $request->email,
             'password' => $request->password,
+            'statu' => 2,
 
         ]);
         return redirect()->back()->with('msg', 'Cadastro realizado com sucesso!');
@@ -89,7 +90,7 @@ class UserController extends Controller
 
     public function servistore(Request $request)
     {
-        // dd(User::find(auth()->user()->id));
+        // dd($request->all());
         $request->validate(
             [
                 'name' => 'required',
@@ -121,6 +122,7 @@ class UserController extends Controller
             'lotacao' => $request->lotacao,
             'pai' => $request->pai,
             'mae' => $request->mae,
+            'statu' => $request->statu,
             'password' => Hash::make('12345678'),
         ]);
 
@@ -130,36 +132,12 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         // dd($request->all());
-        $data = User::find(auth()->user()->id);
+        $data = User::find($id);
         // dd(User::find(auth()->user()->id));
-        $request->validate(
-            [
-                'name' => 'required',
-                'cpf' => 'required',
-                // 'email' => 'required',
-                'estado_civil' => 'required',
-                'endereco' => 'required',
-                'date' => 'required',
-                // 'cidade' => 'required',
-                // 'uf' => 'required',
-                // 'nacionalidade' => 'required',
-                // 'natural' => 'required',
-                // 'rg' => 'required',
-            ]
-        );
-
-        $data->name = $request->name;
-        $data->date = $request->date;
-        $data->cpf = $request->cpf;
-        $data->matricula = $request->matricula;
-        $data->sexo = $request->sexo;
-        $data->profissao = $request->profissao;
-        $data->estado_civil = $request->estado_civil;
-        $data->endereco = $request->endereco;
-        $data->email = $request->email; //email
+        $data->statu = $request->statu;
         $data->update();
         return redirect()->back()->with('msg', 'Atualizado com sucesso!');
     }
