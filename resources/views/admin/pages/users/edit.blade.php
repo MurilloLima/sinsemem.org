@@ -20,33 +20,32 @@
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
-        <div class="row">
-            <div class="col-md-12">
-                @if ($errors->any())
-                    <div class="alert alert-danger text-center" style="margin: 10px;">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li style="text-align: center">{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                @if (session('msg'))
-                    <div class="row text-center">
-                        <div class="col-md-12" \>
-                            <div class="alert alert-success text-center" style="color: white; margin: 10px;">
-                                {{ session('msg') }}
-                            </div>
-                        </div>
-                    </div>
-                @endif
 
-            </div>
-        </div>
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <div class="col-md-12">
+                        @if ($errors->any())
+                            <div class="alert alert-danger text-center" style="margin: 10px;">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li style="text-align: center">{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        @if (session('msg'))
+                            <div class="row text-center">
+                                <div class="col-md-12" \>
+                                    <div class="alert alert-success text-center" style="color: white; margin: 10px;">
+                                        {{ session('msg') }}
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+
+                    </div>
                     <div class="col-md-12">
                         <div class="card card-warning">
                             <div class="card-header">
@@ -57,30 +56,32 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-6">
+                                            <input type="hidden" name="statu">
                                             <label for="">Nome completo</label>
-                                            <input type="text" class="form-control" name="name"
+                                            <input type="text" class="form-control" name="name" required
                                                 value="{{ auth()->user()->name }}">
                                         </div>
                                         <div class="col-3">
-                                            <label for="Data nascimento">Data nascimento</label>
-                                            <input type="date" class="form-control" value="{{ auth()->user()->date }}"
-                                                name="date">
+                                            <label for="">CPF</label>
+                                            <input type="text" class="form-control" required name="cpf"
+                                                value="{{ auth()->user()->cpf }}">
                                         </div>
                                         <div class="col-3">
-                                            <label for="">CPF</label>
-                                            <input type="text" class="form-control" value="{{ auth()->user()->cpf }}"
-                                                name="cpf">
+                                            <label for="Data nascimento">Data nascimento</label>
+                                            <input type="date" class="form-control" required
+                                                value="{{ auth()->user()->date }}" name="date">
                                         </div>
+
                                     </div>
                                     <div class="row">
                                         <div class="col-3">
                                             <label for="">Matricula</label>
                                             <input type="text" class="form-control"
-                                                value="{{ auth()->user()->matricula }}" name="matricula">
+                                                value="{{ auth()->user()->matricula }}" required name="matricula">
                                         </div>
                                         <div class="col-3">
                                             <label for="">Sexo</label>
-                                            <select name="sexo" class="form-control">
+                                            <select name="sexo" class="form-control" required>
                                                 <option value="{{ auth()->user()->sexo }}" selected>
                                                     {{ auth()->user()->sexo }}</option>
                                                 <option value="Masculino">Masculino</option>
@@ -89,14 +90,14 @@
                                         </div>
                                         <div class="col-6">
                                             <label for="">Profissão</label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" required
                                                 value="{{ auth()->user()->profissao }}" name="profissao">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
                                             <label for="">Estado civil</label>
-                                            <select name="estado_civil" class="form-control">
+                                            <select name="estado_civil" class="form-control" required>
                                                 <option value="{{ auth()->user()->estado_civil }}" selected>
                                                     {{ auth()->user()->estado_civil }}</option>
                                                 <option value="Solteiro">Solteiro</option>
@@ -106,15 +107,15 @@
                                         </div>
                                         <div class="col-md-8">
                                             <label for="">Endereço</label>
-                                            <input type="text" class="form-control"
+                                            <input type="text" class="form-control" required
                                                 value="{{ auth()->user()->endereco }}" name="endereco">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label for="">E-mail</label>
-                                            <input type="email" name="email" value="{{ auth()->user()->email }}"
-                                                class="form-control">
+                                            <input type="email" required name="email"
+                                                value="{{ auth()->user()->email }}" class="form-control">
                                         </div>
                                     </div>
                                 </div>

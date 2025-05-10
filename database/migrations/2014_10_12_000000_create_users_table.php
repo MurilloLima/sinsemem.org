@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('role')->default('Ativo');
+            $table->string('role')->default('Inativo');
             $table->string('img')->nullable();
             $table->string('name');
             $table->string('cpf')->nullable();
@@ -24,7 +24,6 @@ return new class extends Migration
             $table->string('endereco')->nullable();
             $table->string('email');
             $table->string('password');
-            $table->string('statu')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

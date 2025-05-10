@@ -27,6 +27,14 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="{{ route('admin.pages.reunioes.create') }}" class="btn btn-primary"
+                                style="margin-bottom: 5px">
+                                Cadastrar
+                            </a>
+                        </div>
+                    </div>
                     <div class="col-sm-6">
                     </div>
                     <div class="col-sm-6">

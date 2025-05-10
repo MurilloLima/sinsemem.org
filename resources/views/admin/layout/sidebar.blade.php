@@ -36,7 +36,7 @@
          </div> --}}
 
          <!-- Sidebar Menu -->
-         @if (auth()->user()->role === 'Ativo')
+         @if (auth()->user()->role == 'Ativo')
              <nav class="mt-2">
                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                      data-accordion="false">
@@ -96,7 +96,7 @@
                      </form>
                  </ul>
              </nav>
-         @else
+         @elseif(auth()->user()->role == 'Admin')
              <nav class="mt-2">
                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                      data-accordion="false">

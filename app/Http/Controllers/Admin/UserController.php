@@ -53,10 +53,12 @@ class UserController extends Controller
             'endereco' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required',
+            'cpf' => 'required',
         ]);
         // dd($request->all());
         User::create([
             'name' => $request->name,
+            'cpf' => $request->cpf,
             'email' => $request->email,
             'role' => 2,
             'date' => $request->date,
@@ -134,10 +136,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // dd($request->all());
         $data = User::find($id);
-        // dd(User::find(auth()->user()->id));
-        $data->statu = $request->statu;
         $data->update();
         return redirect()->back()->with('msg', 'Atualizado com sucesso!');
     }
