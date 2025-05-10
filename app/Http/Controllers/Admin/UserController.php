@@ -68,7 +68,6 @@ class UserController extends Controller
             'endereco' => $request->endereco,
             'email' => $request->email,
             'password' => $request->password,
-            'statu' => 2,
 
         ]);
         return redirect()->back()->with('msg', 'Cadastro realizado com sucesso!');
@@ -135,6 +134,12 @@ class UserController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id)
+    {
+        $data = User::find($id);
+        $data->update();
+        return redirect()->back()->with('msg', 'Atualizado com sucesso!');
+    }
+    public function role(Request $request, $id)
     {
         $data = User::find($id);
         $data->update();

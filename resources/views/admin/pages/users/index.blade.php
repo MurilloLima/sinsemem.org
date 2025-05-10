@@ -157,11 +157,7 @@
                                                 <td>{{ $item->profissao }}</td>
                                                 <td>{{ $item->date }}</td>
                                                 <th>
-                                                    @if ($item->statu == 1)
-                                                        Ativo
-                                                    @elseif($item->statu == 2)
-                                                        Inativo
-                                                    @endif
+                                                   {{ $item->role }}
                                                 </th>
                                                 <td>
                                                     <a href="{{ route('admin.pages.mensagem.index') }}">
