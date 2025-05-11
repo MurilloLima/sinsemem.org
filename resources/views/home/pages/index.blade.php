@@ -101,6 +101,7 @@
                             {{-- <div class="icon"></div> --}}
                             <h4>{{ $item->nome }}</h4>
                             <p>{{ $item->local }}</p>
+                            <span>{{ $item->data }}</span>
                             {{-- <div class="text-button">
                                 <a href="#">Ler mais+ <i class="fa fa-arrow-right"></i></a>
                             </div> --}}
