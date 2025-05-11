@@ -178,7 +178,7 @@
                                             <div class="modal fade" id="modal-default{{ $item->id }}"
                                                 aria-hidden="true" style="display: none;">
                                                 <div class="modal-dialog">
-                                                    <form action="{{ route('admin.pages.statu', $item->id) }}"
+                                                    <form action="{{ route('admin.pages.role', $item->id) }}"
                                                         method="post">
                                                         @csrf
                                                         <div class="modal-content">
@@ -191,7 +191,7 @@
                                                             </div>
 
                                                             <div class="modal-body">
-                                                                <select name="statu" class="form-control">
+                                                                <select name="role" class="form-control">
                                                                     <option value="1">Ativo</option>
                                                                     <option value="2">Inativo</option>
                                                                     {{-- <option value=""></option> --}}

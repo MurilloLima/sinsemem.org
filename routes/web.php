@@ -105,7 +105,7 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/agenda', [AgendaController::class, 'indexadmin'])->name('admin.pages.agenda.index');
 
     // role
-    Route::post('admin/startus/{id}', [UserController::class, 'update'])->name('admin.pages.statu');
+    Route::post('admin/startus/{id}', [UserController::class, 'update'])->name('admin.pages.role');
 
     // filter
     Route::post('admin/servidorers/filter', [FilterController::class, 'search'])->name('admin.servidor.filter');

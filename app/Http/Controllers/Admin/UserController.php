@@ -133,13 +133,15 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function role(Request $request, $id)
     {
         $data = User::find($id);
-        $data->update();
+        $data->update([
+            'role' => $request->role
+        ]);
         return redirect()->back()->with('msg', 'Atualizado com sucesso!');
     }
-    public function role(Request $request, $id)
+    public function update(Request $request, $id)
     {
         $data = User::find($id);
         $data->update();
