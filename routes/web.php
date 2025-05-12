@@ -87,7 +87,7 @@ Route::middleware('auth')->group(function () {
 
     //mensagem
     Route::get('admin/mensagem', [MensagenController::class, 'index'])->name('admin.pages.mensagem.index');
-    Route::get('admin/mensagem/create', [MensagenController::class, 'create'])->name('admin.pages.mensagem.create');
+    Route::get('admin/mensagem/create/{id}', [MensagenController::class, 'create'])->name('admin.pages.mensagem.create');
     Route::post('admin/mensagem/store', [MensagenController::class, 'store'])->name('admin.pages.mensagem.store');
     Route::post('admin/mensagem/destroy', [MensagenController::class, 'destroy'])->name('admin.mensagem.pages.destroy');
 

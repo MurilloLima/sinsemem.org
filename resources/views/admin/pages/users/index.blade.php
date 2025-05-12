@@ -155,12 +155,13 @@
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->profissao }}</td>
-                                                <td>{{ date('d-m-Y', strtotime($item->date));  }}</td>
+                                                <td>{{ date('d-m-Y', strtotime($item->date)) }}</td>
                                                 <th>
-                                                   {{ $item->role }}
+                                                    {{ $item->role }}
                                                 </th>
                                                 <td>
-                                                    <a href="{{ route('admin.pages.mensagem.index') }}">
+                                                    <a href="" data-toggle="modal"
+                                                        data-target="#modal-msg{{ $item->id }}">
                                                         <i class="nav-icon far fa-envelope"></i>
                                                     </a>
 
@@ -168,14 +169,53 @@
                                                         <i class="nav-icon far fa-user"></i>
                                                     </a>
                                                     <a href="" title="Alterar startus" data-toggle="modal"
-                                                        data-target="#modal-default{{ $item->id }}">
+                                                        data-target="#modal-role{{ $item->id }}">
                                                         <i class="nav-icon far fa-edit"></i>
                                                     </a>
                                                 </td>
                                             </tr>
+                                            {{-- modal msg --}}
+                                            <div class="modal fade" id="modal-msg{{ $item->id }}" aria-hidden="true"
+                                                style="display: none;">
+                                                <div class="modal-dialog">
+                                                    <form action="{{ route('admin.pages.mensagem.store') }}"
+                                                        method="post">
+                                                        @csrf
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Enviar mensagem para
+                                                                    {{ $item->name }}</h4><br>
 
-                                            {{-- modal --}}
-                                            <div class="modal fade" id="modal-default{{ $item->id }}"
+                                                                <button type="submit" class="close"
+                                                                    data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">×</span>
+                                                                </button>
+                                                            </div>
+
+                                                            <div class="modal-body">
+                                                                <input type="hidden" name="id"
+                                                                    value="{{ $item->id }}">
+                                                                <label for="">Assunto</label>
+                                                                <input type="text" name="assunto"
+                                                                    class="form-control">
+                                                                <label for="">Mensagem</label>
+                                                                <textarea name="mensagem" class="form-control" cols="30" rows="10"></textarea>
+                                                            </div>
+                                                            <div class="modal-footer justify-content-between">
+                                                                <button type="button" class="btn btn-default"
+                                                                    data-dismiss="modal">Fechar</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary">Enviar</button>
+                                                            </div>
+                                                    </form>
+                                                    <!-- /.modal-content -->
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+
+                                            {{-- modal role --}}
+                                            <div class="modal fade" id="modal-role{{ $item->id }}"
                                                 aria-hidden="true" style="display: none;">
                                                 <div class="modal-dialog">
                                                     <form action="{{ route('admin.pages.role', $item->id) }}"
