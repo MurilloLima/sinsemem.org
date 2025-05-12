@@ -155,7 +155,7 @@
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->profissao }}</td>
-                                                <td>{{ $item->date }}</td>
+                                                <td>{{ date('d-m-Y', strtotime($item->date));  }}</td>
                                                 <th>
                                                    {{ $item->role }}
                                                 </th>
