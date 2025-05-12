@@ -144,6 +144,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $data = User::find($id);
+        $data->role = $request->get('role');
         $data->update();
         return redirect()->back()->with('msg', 'Atualizado com sucesso!');
     }

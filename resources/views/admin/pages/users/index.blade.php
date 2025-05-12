@@ -192,8 +192,9 @@
 
                                                             <div class="modal-body">
                                                                 <select name="role" class="form-control">
-                                                                    <option value="1">Ativo</option>
-                                                                    <option value="2">Inativo</option>
+                                                                    <option value="Ativo">Ativo</option>
+                                                                    <option value="Inativo">Inativo</option>
+                                                                    <option value="Admin">Admin</option>
                                                                     {{-- <option value=""></option> --}}
                                                                     {{-- <option value=""></option> --}}
                                                                 </select>
