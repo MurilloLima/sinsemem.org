@@ -60,22 +60,25 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
-
+                                            <tr>
+                                                <td>{{ $intem->id }}</td>
+                                                <td>{{ $intem->id }}</td>
+                                                <td>{{ $intem->id }}</td>
+                                                <td>{{ $intem->id }}</td>
+                                                <td></td>
+                                                <td>
+                                                    <a href="" class="btn btn-default" data-toggle="modal"
+                                                        data-target="#modal-default">
+                                                        <i class="nav-icon far fa-edit"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
                                         @endforeach
-
                                     </tbody>
                                 </table>
                             </div>
 
-                            <div class="card-footer clearfix">
-                                {{-- <ul class="pagination pagination-sm m-0 float-right">
-                                    <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">»</a></li>
-                                </ul> --}}
-                            </div>
+
                         </div>
                     </div>
                 </div>

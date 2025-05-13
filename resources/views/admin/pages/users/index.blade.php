@@ -169,9 +169,46 @@
                                                         <i class="nav-icon far fa-user"></i>
                                                     </a>
                                                     <a href="" title="Alterar startus" data-toggle="modal"
-                                                        data-target="#modal-role{{ $item->id }}">
+                                                        data-target="#modal-default{{ $item->id }}">
                                                         <i class="nav-icon far fa-edit"></i>
                                                     </a>
+
+                                                    {{-- modal statu --}}
+                                                    <div class="modal fade" id="modal-default{{ $item->id }}"
+                                                        aria-hidden="true" style="display: none;">
+                                                        <div class="modal-dialog">
+                                                            <form action="{{ route('admin.pages.role', $item->id) }}"
+                                                                method="post">
+                                                                @csrf
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 class="modal-title">Alterar startus</h4>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <select name="role" class="form-control">
+                                                                            <option value="Ativo">Ativo</option>
+                                                                            <option value="Inativo">Inativo</option>
+                                                                            <option value="Admin">Admin</option>
+                                                                            {{-- <option value=""></option> --}}
+                                                                            {{-- <option value=""></option> --}}
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="modal-footer justify-content-between">
+                                                                        <button type="button" class="btn btn-default"
+                                                                            data-dismiss="modal">Close</button>
+                                                                        <button type="submit" class="btn btn-primary">
+                                                                            Salvar</button>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /.modal-content -->
+                                                            </form>
+                                                        </div>
+                                                        <!-- /.modal-dialog -->
+                                                    </div>
                                                 </td>
                                             </tr>
                                             {{-- modal msg --}}

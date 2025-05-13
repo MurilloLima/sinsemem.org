@@ -73,7 +73,6 @@
                             <form action="{{ route('admin.pages.reunioes.store') }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
-
                                 <div class="card-body">
                                     <label for="">Assunto</label>
                                     <input type="text" name="assunto" class="form-control">
