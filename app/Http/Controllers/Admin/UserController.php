@@ -186,4 +186,11 @@ class UserController extends Controller
         ]);
         return redirect()->back()->with('msg', 'Senha alterada com sucesso!');
     }
+
+    public function destroy(string $id)
+    {
+        User::destroy($id);
+        return redirect()->back()->with('msg', 'Alterado com sucesso!');
+
+    }
 }

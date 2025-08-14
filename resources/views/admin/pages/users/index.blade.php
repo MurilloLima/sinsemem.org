@@ -172,7 +172,9 @@
                                                         data-target="#modal-default{{ $item->id }}">
                                                         <i class="nav-icon far fa-edit"></i>
                                                     </a>
-
+                                                    <a href="{{ route('admin.pages.user.destroy', [$item->id]) }}" title="Deletar">
+                                                        <i class="fas fa-minus"></i>
+                                                    </a>
                                                     {{-- modal statu --}}
                                                     <div class="modal fade" id="modal-default{{ $item->id }}"
                                                         aria-hidden="true" style="display: none;">

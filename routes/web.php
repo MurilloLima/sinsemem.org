@@ -66,6 +66,7 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/servidores', [UserController::class, 'index'])->name('admin.pages.servidores.index');
     Route::get('admin/servidores/create', [UserController::class, 'servidores'])->name('admin.pages.servidores.create');
     Route::post('admin/servidores/store', [UserController::class, 'servistore'])->name('admin.pages.servidores.store');
+    Route::get('admin/users/destroy/{id}', [UserController::class, 'destroy'])->name('admin.pages.user.destroy');
 
     //user admin
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
