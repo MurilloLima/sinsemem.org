@@ -83,10 +83,8 @@
                                     <input type="text" name="desc" class="form-control">
                                     <div class="form-group">
                                         <label for="customFile">Conteúdo</label>
-                                        <div class="mb-3">
-                                            <textarea class="textarea" name="conteudo" placeholder="Place some text here"
-                                                style="width: 100%; font-size: 14px; line-height: 18px; border: 1px solid rgb(221, 221, 221); padding: 10px; display: none;"></textarea>
-                                        </div>
+                                        <textarea class="textarea" name="conteudo" placeholder="Place some text here"
+                                            style="width: 100%; height: 350px; font-size: 14px; line-height: 18px; border: 1px solid rgb(221, 221, 221); padding: 10px; display: none;"></textarea>
                                     </div>
                                 </div>
 
