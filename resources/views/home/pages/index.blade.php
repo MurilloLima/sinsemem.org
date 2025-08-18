@@ -171,7 +171,7 @@
                             <li style="color: #fb1424 !important;">SINSEMEM</li>
                         </ul>
                         <div class="border-button">
-                            <a href="application-18d3589a-31a2-46ba-9bde-1d6e6c832802.apk">Download</a>
+                            <a href="application-34c0d256-e719-4a7e-a320-35f419baa669.apk">Instalar</a>
                         </div>
                     </div>
                 </div>

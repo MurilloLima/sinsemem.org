@@ -50,9 +50,9 @@
             });
         });
     </script>
-    
-     {{-- date --}}
-     <script>
+
+    {{-- date --}}
+    <script>
         function mascaraData(campo, e) {
             var kC = (document.all) ? event.keyCode : e.keyCode;
             var data = campo.value;

@@ -169,7 +169,7 @@
                                         </div>
                                         <div class="col-md-2">
                                             <label for="">CPF</label>
-                                            <input type="text" name="email" oninput="mascara(this)"
+                                            <input type="text" name="email"  oninput="mascara(this)"
                                                 class="form-control">
                                         </div>
                                         <div class="col-md-3">
