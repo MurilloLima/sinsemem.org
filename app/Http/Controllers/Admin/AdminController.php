@@ -19,11 +19,10 @@ class AdminController extends Controller
         $noticias = Noticia::latest()->get();
         $users = User::latest()->get();
         $reunioes = Reunioe::latest()->get();
-        if(Auth()->user()->role === 'Inativo'){
-            return view('home.pages.user.verify');
-        }
-        else {
+        if (Auth()->user()->role === 'Admin') {
             return view('admin.pages.index', compact('noticias', 'users', 'reunioes'));
+        } else {
+            return view('home.pages.user.verify');
         }
 
 

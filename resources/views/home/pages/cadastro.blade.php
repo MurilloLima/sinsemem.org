@@ -54,6 +54,7 @@
                                         <form action="{{ route('home.pages.user.store') }}" method="post">
                                             @csrf
                                             <input type="hidden" name="role" value="2">
+
                                             <div class="row">
                                                 <div class="col-md-12" style="text-align: center">
                                                     <h1>Cadastrar-se</h1>
